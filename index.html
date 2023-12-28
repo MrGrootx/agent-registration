@@ -12,10 +12,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <body class="bg-gray-300 mb-4 ">
-    
-    <main class="ml-6 md:ml-0">
-      <section class="container border bg-gray-200 md:mx-auto  mt-20 rounded">
+  <body class="bg-gray-300 mb-4">
+    <main class="ml-6 md:ml-0 border w-full">
+      <section class="md:container border bg-gray-200 md:mx-auto mt-20 rounded">
         <div class="m-6 mb-16">
           <div class="flex justify-between">
             <h3 class="font-bold text-xl">Agent Registration</h3>
@@ -26,12 +25,15 @@
               ><i class="fa fa-github" aria-hidden="true"></i
             ></a>
           </div>
-  
+
           <!-- Header -->
           <div class="mt-6 hidden md:block">
             <div class="border border-gray-300 flex justify-between rounded">
               <div class="md:mx-8 mx-3 py-1">
-                <i class="fa fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                <i
+                  class="fa fa-check text-green-500 mr-2"
+                  aria-hidden="true"
+                ></i>
                 <span class="mr-3">Personal Details</span>
               </div>
               <div class="md:mx-8 py-1 border-b-2 border-green-500">
@@ -57,12 +59,12 @@
               </div>
             </div>
           </div>
-  
+
           <div>
             <h1 class="font-semibold mt-4 ml-3">Profile information</h1>
-  
+
             <div class="mx-auto">
-              <form id="mainform" action="" class=" ">
+              <form id="mainform" name="agentForm">
                 <div class="grid md:grid-cols-3 mt-4">
                   <div class="mx-auto">
                     <div>
@@ -75,11 +77,11 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="agencyName"
                       id="agencyName"
                     />
                   </div>
-  
+
                   <div class="mx-auto">
                     <div>
                       <label
@@ -91,11 +93,11 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="agencyType"
                       id="agencyType"
                     />
                   </div>
-  
+
                   <div class="mx-auto mb-7">
                     <div class="">
                       <label
@@ -107,13 +109,13 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="password"
                       id="password"
                     />
                   </div>
-  
+
                   <!-- sec 2 -->
-  
+
                   <div class="mx-auto">
                     <div>
                       <label
@@ -125,11 +127,11 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="address"
                       id="address"
                     />
                   </div>
-  
+
                   <div class="mx-auto">
                     <div>
                       <label
@@ -140,12 +142,12 @@
                     </div>
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
-                      type="email"
-                      name=""
+                      type="text"
+                      name="state"
                       id="state"
                     />
                   </div>
-  
+
                   <div class="mx-auto mb-7">
                     <div>
                       <label
@@ -158,11 +160,12 @@
                     </div>
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
-                      name=""
+                      name="telephoneNum"
                       id="telephoneNum"
+                      value="1254524574"
                     />
                   </div>
-  
+
                   <!-- Sec 3-->
                   <div class="mx-auto mb-7">
                     <div>
@@ -176,11 +179,11 @@
                     </div>
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
-                      name=""
+                      name="tollFreeNum"
                       id="tollFreeNum"
                     />
                   </div>
-  
+
                   <div class="mx-auto mb-7">
                     <div>
                       <label
@@ -192,11 +195,11 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="email"
-                      name=""
+                      name="emailId"
                       id="emailId"
                     />
                   </div>
-  
+
                   <div class="mx-auto mb-7">
                     <div>
                       <label
@@ -208,11 +211,11 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="Website"
                       id="website"
                     />
                   </div>
-  
+
                   <!-- sec 3 -->
                   <div class="mx-auto mb-7">
                     <div>
@@ -225,22 +228,23 @@
                     <input
                       class="py-2 px-1 outline-none rounded border border-gray-300"
                       type="text"
-                      name=""
+                      name="companyName"
                       id="companyName"
                     />
                   </div>
-  
+
                   <div class="">
                     <div class="mx-auto mb-7 border w-64 px-3 bg-white rounded">
                       <label for="" class="text-sm text-gray-500 font-semibold"
                         >Office Space</label
                       >
-  
+
                       <div class="flex justify-center gap-x-2 mt-2 mb-3">
                         <input
                           type="radio"
-                          name="radio_group"
+                          name="radio"
                           class="items-center"
+                          value="Owned"
                           id="radio_group"
                         />
                         <label
@@ -248,13 +252,13 @@
                           class="text-sm font-semibold text-gray-500 items-center"
                           >Owned</label
                         >
-  
+
                         <input
                           type="radio"
-                          name="radio_group"
-                          value="30"
+                          name="radio"
                           class="items-center"
                           id="radio_group"
+                          value="Rental"
                         />
                         <label
                           for="Office"
@@ -264,7 +268,7 @@
                       </div>
                     </div>
                   </div>
-  
+
                   <div class="mx-auto mb-7 border w-64 px-3 bg-white rounded">
                     <label
                       for="companyLogo"
@@ -275,32 +279,34 @@
                       type="file"
                       class="py-2 outline-none rounded border-gray-200"
                       id="companyLogo"
+                      name="companyLogo"
                     />
                   </div>
                 </div>
-  
+
                 <div
                   class="hidden md:block text-xs ml-36 font-semibold text-gray-500"
                 >
                   <p>
                     in order to process your registration, we ask to provide the
-                    following the information. Please note that all fields marked
-                    with an asterisk (<span class="text-red-600">*</span>) are
-                    required.
+                    following the information. Please note that all fields
+                    marked with an asterisk (<span class="text-red-600">*</span
+                    >) are required.
                   </p>
                 </div>
-  
+
                 <!-- Buttons -->
                 <div class="flex md:justify-end justify-center mt-14">
                   <div class="">
                     <button
-                      type="button"
+                      type="submit"
                       class="bg-gray-400 py-2 px-4 uppercase rounded shadow hover:shadow-black transition-all duration-500"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
+                      id="disabledBtn1"
                       class="bg-green-500 py-2 px-4 uppercase rounded shadow hover:shadow-black transition-all duration-500"
                     >
                       Continue
@@ -313,9 +319,12 @@
           </div>
         </div>
       </section>
-  
+
       <!-- out-->
-      <section class="inset-0 fixed bg-gray-500 flex items-center justify-center hidden">
+      <section
+        class="inset-0 fixed bg-gray-500 flex items-center justify-center hidden"
+        id="previewSection"
+      >
         <div
           class="md:container md:mx-auto px-6 md:px-0 bg-gray-600 bg-opacity-20 rounded border-b border-gray-700"
         >
@@ -326,78 +335,94 @@
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Agency Name</h1>
-                <h2>Groot Development</h2>
+                <h2 id="previewAgencyName" class="text-teal-600">
+                  Groot Development
+                </h2>
               </div>
-  
+
               <div
                 class="flex justify-between border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Agency Type</h1>
-                <h2>Groot Development</h2>
+                <h2 id="previewAgencyType" class="text-teal-600">
+                  Groot Development
+                </h2>
               </div>
               <div
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Password</h1>
-                <h2>Groot Development</h2>
+                <h2 id="previewPassword" class="text-teal-600">
+                  Groot Development
+                </h2>
               </div>
               <div
                 class="flex justify-between border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Address</h1>
-                <h2>Groot Development</h2>
+                <h2 id="previewAddress" class="text-teal-600">
+                  Groot Development
+                </h2>
               </div>
               <div
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>State</h1>
-                <h2>TamilNadu</h2>
+                <h2 id="previewState" class="text-teal-600">TamilNadu</h2>
               </div>
               <div
                 class="flex justify-between border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Telephone Number</h1>
-                <h2>123214535</h2>
+                <h2 id="previewPhoneNumber" class="text-teal-600">123214535</h2>
               </div>
               <div
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Toll free number</h1>
-                <h2>911</h2>
+                <h2 id="previewTollFreeNumber" class="text-teal-600">911</h2>
               </div>
-  
+
               <div
                 class="flex justify-between border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Email ID</h1>
-                <h2>grootdev@gmail.com</h2>
+                <h2 id="previewEmailid" class="text-teal-600">
+                  grootdev@gmail.com
+                </h2>
               </div>
               <div
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Company Name</h1>
-                <h2>Groot Development</h2>
+                <h2 id="previewCompanyName" class="text-teal-600">
+                  Groot Development
+                </h2>
               </div>
               <div
                 class="flex justify-between border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Office Space</h1>
-                <h2>Owned</h2>
+                <h2 id="previewOfficeSpace" class="text-teal-600">Owned</h2>
               </div>
               <div
                 class="flex justify-between border-r border-gray-500 border-opacity-35 hover:bg-gray-700 hover:text-gray-100 transition-all duration-500 py-3 px-2 bg-gray-300 font-semibold text-gray-500 mb-3"
               >
                 <h1>Website</h1>
-                <h2>https:grootdev.in</h2>
+                <h2 id="previewWebsite" class="text-teal-600">
+                  https:grootdev.in
+                </h2>
               </div>
-  
+
               <div class="flex md:justify-end justify-center">
                 <button
+                  id="previewCancelBtn"
                   class="bg-gray-500 mr-2 my-2 py-2 px-6 hover:bg-gray-400 rounded transition-all duration-500 font-semibold text-gray-300 hover:text-gray-200"
                 >
                   CANCEL
                 </button>
                 <button
+                  id="previewConfirmBtn"
                   class="bg-teal-500 mr-2 my-2 px-8 hover:bg-teal-400 rounded transition-all duration-500 font-semibold text-gray-600"
                 >
                   CONFIRM
@@ -406,19 +431,37 @@
             </div>
           </div>
         </div>
-  
-        
-  
       </section>
-  
+
       <!-- Alert -->
-      <div class="container md:mx-auto flex md:justify-end justify-center mt-3 md:animate-pulse hidden">
-        <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md pt-4 md:w-1/4" role="alert">
+      <div
+        id="alertBox"
+        class="container md:mx-auto flex md:justify-end justify-center mt-3 md:animate-pulse hidden"
+      >
+        <div
+          class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md pt-4 md:w-1/4"
+          role="alert"
+        >
           <div class="flex">
-            <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+            <div class="py-1">
+              <svg
+                class="fill-current h-6 w-6 text-teal-500 mr-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                />
+              </svg>
+            </div>
             <div>
-              <p class="font-bold text-sm">Your Company Application has been Sended Successfully</p>
-              <p class="text-xs">We have received your application. Our team will review it shortly..</p>
+              <p class="font-bold text-sm">
+                Your Company Application has been Sended Successfully
+              </p>
+              <p class="text-xs">
+                We have received your application. Our team will review it
+                shortly..
+              </p>
             </div>
           </div>
         </div>
